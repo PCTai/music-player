@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #ec1f55;
+    --text-color: #333;
+}
+body {
+    background-color: #f5f5f5;
+}
+  
+html {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    max-width: 480px;
+    height: 100vh;
+    margin:0 auto;
+    position: relative;
+}
+/* dashboard */
+.dashboard{
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    width: 100%;
+    max-width: 480px;
+    border-bottom: 1px solid #ebebeb;
+    padding: 14px 16px;
+}
+header{
+    text-align: center;
+    padding-bottom: 20px;
+}
+header h4{
+    color: var(--primary-color);
+    padding-bottom: 10px;
+}
+.cd{
+    width: 200px;
+    display: flex;
+    margin: auto;
+}
+.cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+    margin: auto;
+}
+.control{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    color: #666;
+    padding: 18px;
+    font-size: 18px;
+}
+.btn-toggle-play {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+  }
+.container .icon-pause {
+    display: none;
+}
+.container.playing .icon-pause {
+    display: inline-block;
+}
+  
+.container.playing .icon-play {
+    display: none;
+}
+
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+
+
+
+/* playlist */
+.playlist{
+    margin-top: 408px;
+    padding: 12px
+}
+.playlist .active{
+    background-color: var(--primary-color);
+    
+}
+.playlist .active .song p,
+.playlist .active .song h3,
+.playlist .active .song i{
+    color: #fff;
+}
+.song{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+}
+.thumb{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    background-size: cover;
+}
+.body{
+    flex: 1;
+}
+.option{
+    float: right ;
+}
+
+.control .active{
+    color: var(--primary-color);
+}
